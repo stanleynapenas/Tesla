@@ -1,3 +1,105 @@
+/* Macro Class */
+
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: white;
+    font-size: 14px;
+    /* debug */
+    background-color: black;
 }
+
+/* Debug */
+/* div, header, ul{
+    border: 1px solid white;
+} */
+/* End Debug */
+
+h1 {
+    font-size: 40px;
+}
+
+
+.icon{
+    position: relative;
+    background-color: sandybrown;
+    z-index: 10;
+    width: 18px;
+    margin-bottom: 5px;
+}
+.icon:hover,
+.icon:focus {
+  opacity: 50%;
+}
+.icon:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.ghost{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    min-width: 350px;
+    background-color: white;
+    right: -100%;
+}
+
+.ghostopen{
+    transition: linear 1s;
+    right: 0%;
+
+}
+
+.secondaryLinks{
+    padding: 23px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #333333;
+    border-bottom: 1px solid #CCCCCC ;
+    cursor: pointer;
+}
+
+.secondaryLinks:first-child{
+    margin-top: 60px;
+}
+
+
+
+/* END of Macro Class */
+
+
+
+/* First Section */
+.myNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo{
+    height: 18px;
+}
+
+.navLinksWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.myNavLink{
+    color: white;
+    text-transform: uppercase;
+}
+
+.lottie{
+    height: 20px;
+    width: 20px;
+}
+
+

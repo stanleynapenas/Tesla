@@ -96,6 +96,7 @@ img {
   margin: auto;
   text-align: left;
   color: #333;
+  cursor: pointer;
 }
 
 .nav-link:hover,
