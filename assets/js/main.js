@@ -1,13 +1,14 @@
 $( document ).ready(function() {
     
+
+    var elemento = $('.myNavLink').attr('data-tgl','openHamburger');
     
-    $('.ghost').click(function() {
+    elemento.click(function() {
         var clicks = $(this).data('clicks');
         if (clicks) {
-            console.log("funziona!");
-            $(this).addClass(".ghostopen");
+            $(".ghost").addClass("ghostopen");
         } else {
-            $(this).removeClass(".ghostopen");
+            $(".ghost").removeClass("ghostopen");
         }
         $(this).data("clicks", !clicks);
       });
