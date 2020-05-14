@@ -11,108 +11,78 @@
     <title>Electric Cars, Solar Panels & Clean Energy Storage | Tesla</title>
 </head>
 <body>
-    <!-- Main First Section -->
-    <div class="mainCanvas">
-
-        
-
-        <!-- Header containing Nav Bar -->
-        <header class="nav myNav">
-            <!-- Logo -->
-            <a href="https://www.tesla.com/">
-                <img class="logo" src="/assets/img/Tesla_Logo.svg" alt="">
-            </a>
     
-            <!-- Main Nav Links -->
-            <ul class="navLinksWrapper">
-                <li class="nav-link myNavLink">Model S</li>
-                <li class="nav-link myNavLink">Model 3</li>
-                <li class="nav-link myNavLink">Model X</li>
-                <li class="nav-link myNavLink">Model Y</li>
-                <li class="nav-link myNavLink">Solar Roof</li>
-                <li class="nav-link myNavLink">Solar Panels</li>
-            </ul>
-            <!-- END Main Nav Links -->
+    <!-- Navbar Main -->
+    <div class="myNavbar">
+        <a href="#" class="myNavbarSmallWrapper">
+            <img class="logo" src="/assets/img/Tesla_Logo.svg" alt="">
+        </a>
+        <div class="myNavbarSmallWrapper">
+            <a id="modelS" href="#">Model S</a id="model">
+            <a id="modelX" href="#">Model X</a>
+            <a id="model3" href="#">Model 3</a>
+            <a id="modelY" href="#">Model Y</a>
+            <a href="#">Solar Roof</a>
+            <a href="#">Solar Panel</a>
+        </div>
+        <div class="myNavbarSmallWrapper">
+            <a href="#">Shop</a>
+            <a href="#">Sign</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="openNav()">OPEN</a>
+        </div>
+    </div>
+    <!-- Navbar Slider Right -->
+    <div class="sidenav" id="mySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+            Close
+        </a>
+        <a href="#">Existing inventory</a>
+        <a href="#">Used inventory</a>
+        <a href="#">Test drive</a>
+        <a href="#">Find us</a>
+        <a href="#">Support</a>
+        <a href="#">Get newsletter</a>
+        <a href="#">News</a>
+        <a href="#">Energy</a>
+        <a href="#">Cybertruck</a>
+        <a href="#">Roadster</a>
+        <a href="#">Semi</a>
+        <a href="#">Charging</a>
+        <a href="#">United States</a>
+    </div>
     
-            <!-- Other + Hamburger -->
-            <ul class="navLinksWrapper">
-                <li class="nav-link myNavLink">Shop</li>
-                <li class="nav-link myNavLink">Sign in</li>
-                <li class="nav-link myNavLink zindex">
-                    <img class="icon" data-tgl="openHamburger" src="/assets/img/hamburger.svg" alt="">
-                </li>
-                <li class="ghost">
-                    <div class="secondaryLinks">
-                        Exsisting inventory
-                    </div>
-                    <div class="secondaryLinks">
-                        Used inventory
-                    </div>
-                    <div class="secondaryLinks">
-                        Test drive
-                    </div>
-                    <div class="secondaryLinks">
-                        Find us
-                    </div>
-                    <div class="secondaryLinks">
-                        Support
-                    </div>
-                    <div class="secondaryLinks">
-                        Get newsletter
-                    </div>
-                    <div class="secondaryLinks">
-                        News
-                    </div>
-                    <div class="secondaryLinks">
-                        Energy
-                    </div>
-                    <div class="secondaryLinks">
-                        Cybertruck
-                    </div>
-                    <div class="secondaryLinks">
-                        Roadster
-                    </div>
-                    <div class="secondaryLinks">
-                        Semi
-                    </div>
-                    <div class="secondaryLinks">
-                        Charging
-                    </div>
-                    <div class="secondaryLinks">
-                        United States
-                    </div>
-                </li>
-            </ul>
-                <!-- Inside Hambuger Secondary Nav Links -->
-                <!-- When Mobile, Main Nav Links need to be with Secondary Nav Links -->
-            <!-- END Other + Hamburger -->
-
-        </header>
-        <!-- END Header containing Nav Bar -->
-        
-        <!-- 1st Section Elements -->
-        <section class="hero">
-            <!-- Div Immagine zindex-10 -->
-            <div class="bg-zindex--10">
-    
+    <section class="hero">
+        <div class="bg-Cars">
+            <div class="cliccableCars modelS"></div>
+            <div class="cliccableCars modelX"></div>
+            <div class="cliccableCars model3"></div>
+            <div class="cliccableCars modelY"></div>
+        </div>
+        <div class="carsText">
+            <h1 class="myH1">
+                Model X
+            </h1>
+            <div class="cars-text-link-wrapper">
+                <a href="#" class="btn teslabtn">
+                    Custom Order
+                </a>
+                <a href="#" class="btn teslabtn secondary">
+                    Existing inventory
+                </a>
             </div>
+            <p class="myP top-margin10">
+                Order Online for Touchless Delivery
+            </p>
+        </div>
+    </section>
+    
+    
 
-        </section>
-    </div>    
-
-
-
-
-
-    <!-- Slider Container with Text -->
-        <!-- Slider Panning Image -->
-
-        <!-- Text, / there is a little interaction in the bottom arrow /-->
+    
         
 
 
     <!-- JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/assets/js/main.js"></script>
-</body>
+    <script src="/assets/js/main.js" charset="utf-8"></script>
 </html>

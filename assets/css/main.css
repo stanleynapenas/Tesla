@@ -4,11 +4,17 @@ body{
     font-family: 'Gothic A1', sans-serif;
     font-weight: 500;
     letter-spacing: 1px;
-    color: white;
-    font-size: 14px;
+    color: white; /* need to be white afterwards */
+    font-size: 16px;
+    font-weight: 600;
     /* debug */
-    /* background-color: black; */
+    background-color: black;
 }
+
+.top-margin10{
+    margin-top: 10px;
+}
+
 
 /* Debug */
 /* div, header, ul{
@@ -16,122 +22,191 @@ body{
 } */
 /* End Debug */
 
-h1 {
-    font-size: 40px;
+/* Fonts & Text */
+.myH1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.myP{
+    font-size: 16px;
+    font-weight: 300;
 }
 
 
-
-/* END of Macro Class */
-
+/* NavBar Properties */
 
 
-/* -- First Section */
-.mainCanvas{
-    height: 100vh;
-    position: relative;
+/* The side navigation menu that is at the moment closed */
+.sidenav{
+    height: 100%;
+    width: 0;
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    right: 0;
+    background-color: white;
     overflow: hidden;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    transition: 2s;
+    overflow: scroll;
 }
 
+/* The navigation menu links */
+.sidenav a{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 100px;
+    padding-left: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: block;
+    color: #333333;
+    border-bottom: 1px solid #cccccc;
+    transition: 0.3s;
+}
 
-/* NAV */
-.myNav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover{
+    color: #cccccc;
+}
+
+/* Position and style the close vutton (top right corner) */
+.sidenav a.closebtn{
+    position: absolute;
     padding: 20px;
+    top: 0;
+    right: 0px;
+    margin-right: 0px;
+    /* background-color: red; */
+    border-bottom: none;
+}
+
+@media screen and (max-height: 450px){
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font: 16px;}
+}
+
+.myNavbar a{
+    padding-right: 10px;
+    padding-left: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
 }
 
 .logo{
-    height: 18px;
+    height: 15px;
 }
 
-.navLinksWrapper{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.myNavLink{
-    color: white;
-    text-transform: uppercase;
-}
-
-.zindex{
-    z-index: 10;
-}
-
-
-.icon{
-    position: relative;
-    background-color: sandybrown;
-    width: 18px;
-    margin-bottom: 5px;
-}
-.icon:hover,
-.icon:focus {
-  opacity: 50%;
-}
-.icon:focus {
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
-.ghost{
-    display: none;
+.myNavbar{
     position: absolute;
-    overflow: scroll;
     top: 0;
+    left: 0;
     right: 0;
-    height: 100vh;
-    min-width: 350px;
-    background-color: white;
-    right: -70%;
-    transition: ease-in 310ms;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    z-index: 2;
 }
 
-.ghostopen{
-    display: block;
-    right: 0%;
-    transition: ease-out 310ms;
-}
-
-.secondaryLinks{
-    padding: 23px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #333333;
-    border-bottom: 1px solid #CCCCCC ;
-    cursor: pointer;
-}
-
-.secondaryLinks:first-child{
-    margin-top: 50px;
-}
-
-.secondaryLinks:last-child{
-    margin-bottom: 100px;
-}
-
-
-/* 1st Section Elements */
+/* Hero Section */
 .hero{
+    position: relative;
     padding: 0;
     height: 100vh;
+    overflow: hidden;
 }
 
-.bg-zindex--10{
+.bg-Cars{
     position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../img/Homepage_Desktop_Bluesky.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transform: translateY(0%);
+    display: flex;
+    flex-direction: row;
+}
+
+.cliccableCars{
+    display: block;
+    height: 100%;
+    cursor: pointer;
+}
+/* This div will be the cliccable size that allow to move the image */
+.modelS{
+    width: 30%;
+}
+
+.modelX{
+    width: 20%;
+}
+
+.model3{
+    width: 22%;
+}
+
+.modelY{
+    width: 28%;
+}
+
+.carsText{
+    position: relative;
     top: 0;
     right: 0;
     left: 0;
-    bottom: 0;
-    z-index: -10;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(/assets/img/Homepage_Desktop_Bluesky.png);
+    padding-top: 135px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0%;
 }
+
+.cars-text-link-wrapper{
+    margin-top: 15px;
+}
+
+.hero .carsText p.myP.top-margin10{
+    transform: translateY(50px);
+}
+
+.teslabtn{
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    width: 300px;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #333333;
+    font-weight: 600;
+    background-color: white;
+}
+
+.teslabtn.secondary{
+    color: white;
+    border: 4px solid white;
+    background-color: transparent;
+}
+
+.rightTransition{
+    animation: fromRight 700ms ease-in-out;
+}
+
+@keyframes fromRight{
+    from {transform: translateX(100px);}
+    to {transform: translateX(0);}
+}
+
