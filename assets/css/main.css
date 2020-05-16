@@ -46,7 +46,6 @@ body{
     top: 0;
     right: 0;
     background-color: white;
-    overflow: hidden;
     padding-top: 60px;
     padding-bottom: 40px;
     transition: 2s;
@@ -121,6 +120,7 @@ body{
     padding: 0;
     height: 100vh;
     overflow: hidden;
+    opacity: 1;
 }
 
 .bg-Cars{
@@ -201,8 +201,12 @@ body{
     background-color: transparent;
 }
 
-.rightTransition{
-    animation: fromRight 700ms ease-in-out;
+#right{
+    animation: fromRight 300ms ease-in-out;
+}
+
+#right2{
+    animation: fromRight2 300ms ease-in-out;
 }
 
 @keyframes fromRight{
@@ -210,3 +214,25 @@ body{
     to {transform: translateX(0);}
 }
 
+@keyframes fromRight2{
+    from {transform: translateX(100px);}
+    to {transform: translateX(0);}
+}
+
+#left{
+    animation: fromLeft 300ms ease-in-out;
+}
+
+#left2{
+    animation: fromLeft2 300ms ease-in-out;
+}
+
+@keyframes fromLeft{
+    from {transform: translateX(-100px);}
+    to {transform: translateX(0);}
+}
+
+@keyframes fromLeft2{
+    from {transform: translateX(-100px);}
+    to {transform: translateX(0);}
+}
